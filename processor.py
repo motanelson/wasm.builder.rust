@@ -3,7 +3,7 @@ print("\033c\033[43;30m\n")
 
 class simu:
     def __init__(self):
-        self.reg=["QAX","QBX","QCX","QDX","QBP","QSP","DS","ES"]
+        self.reg=["XMM0","XMM1","XMM2","XMM3","XMM4","XMM5","DS","ES"]
         self.values=[0,0,0,0,0,0,0,0,0]
         self.stack=[]
     def pushs(self,s):
@@ -92,5 +92,5 @@ class simu:
                 
 s=simu()
 s.mov("ES","10")
-s.mov("QAX","ES")
-s.register("QAX")
+s.mov("XMM0","ES")
+s.register("XMM0")
